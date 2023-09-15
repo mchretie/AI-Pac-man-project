@@ -1,0 +1,84 @@
+Note: due to dependencies, the following tests will be run: q3 q6
+Starting on 10-15 at 18:01:03
+
+Question q3
+===========
+*** PASS: test_cases/q3/astar_0.test
+*** 	solution:		['Right', 'Down', 'Down']
+*** 	expanded_states:	['A', 'B', 'D', 'C', 'G']
+*** PASS: test_cases/q3/astar_1_graph_heuristic.test
+*** 	solution:		['0', '0', '2']
+*** 	expanded_states:	['S', 'A', 'D', 'C']
+*** PASS: test_cases/q3/astar_2_manhattan.test
+*** 	pacman layout:		mediumMaze
+*** 	solution length: 68
+*** 	nodes expanded:		221
+*** PASS: test_cases/q3/astar_3_goalAtDequeue.test
+*** 	solution:		['1:A->B', '0:B->C', '0:C->G']
+*** 	expanded_states:	['A', 'B', 'C']
+*** PASS: test_cases/q3/graph_backtrack.test
+*** 	solution:		['1:A->C', '0:C->G']
+*** 	expanded_states:	['A', 'B', 'C', 'D']
+*** PASS: test_cases/q3/graph_manypaths.test
+*** 	solution:		['1:A->C', '0:C->D', '1:D->F', '0:F->G']
+*** 	expanded_states:	['A', 'B1', 'C', 'B2', 'D', 'E1', 'F', 'E2']
+
+### Question q3: 4/4 ###
+
+
+Question q6
+===========
+[]  :food present
+
+{0: {}}  :bigDic
+
+*** PASS: test_cases/q6/food_heuristic_1.test
+[(1, 2), (6, 2)]  :food present
+
+((4, 2), (1, 2)) 3 you know start, food, hn
+
+pushing:  (3, (1, 2))  at  (1, 2) 
+
+*** FAIL: Exception raised: cannot unpack non-iterable int object
+*** 
+*** Traceback (most recent call last):
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/grading.py", line 78, in grade
+***     util.TimeoutFunction(getattr(gradingModule, q),1800)(self) # Call the question's function
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/util.py", line 631, in __call__
+***     result = self.function(*args, **keyArgs)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/autograder.py", line 302, in <lambda>
+***     return lambda grades: question.execute(grades)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/testClasses.py", line 127, in execute
+***     if not f(grades):
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/autograder.py", line 297, in <lambda>
+***     return lambda grades: testCase.execute(grades, moduleDict, solutionDict)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchTestClasses.py", line 545, in execute
+***     passed, message = self.checkHeuristic(heuristic, problem, state, solutionCost)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchTestClasses.py", line 517, in checkHeuristic
+***     h0 = heuristic(state, problem)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchAgents.py", line 566, in foodHeuristic
+***     foodCluster(food, foodList[:], problem)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchAgents.py", line 603, in foodCluster
+***     neighbors = problem.expand(tmp)
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchAgents.py", line 470, in expand
+***     for action in self.getActions(state):
+***   File "/home/sucram/Documents/UNI/AI/Projet1/INFOF311-Projet1/searchAgents.py", line 480, in getActions
+***     x, y = state[0]
+*** TypeError: cannot unpack non-iterable int object
+*** 
+
+### Question q6: 0/4 ###
+
+
+Finished at 18:01:03
+
+Provisional grades
+==================
+Question q3: 4/4
+Question q6: 0/4
+------------------
+Total: 4/8
+
+Your grades are NOT yet registered.  To register your grades, make sure
+to follow your instructor's guidelines to receive credit on your project.
+
